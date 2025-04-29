@@ -29,7 +29,7 @@ This project is part of our **Object-Oriented Programming (OOP) course** for **S
 
 ---
 
-## 🤝 **Collaborators**
+## 🤝 **Team Members**
 
 - **Hanzala**
 - **Anoosh**
