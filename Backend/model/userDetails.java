@@ -11,6 +11,19 @@ public class UserData {
     private String experience;
     private String awards;
     private String projects;
+    public UserData(String firstName, String lastName, String contactNo, String address, String jobTitle,
+                  String email, String education, String experience, String awards, String projects) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.contactNo = contactNo;
+        this.address = address;
+        this.jobTitle = jobTitle;
+        this.email = email;
+        this.education = education;
+        this.experience = experience;
+        this.awards = awards;
+        this.projects = projects;
+    }
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;
