@@ -15,7 +15,7 @@ public class aiTextGenerator {
         UserData details = new UserData("Hanzala", "Wahab", "0325121", "sdahda", "Software Engineer", "hanzalamwa@gmail.com",
         "Bs Cs from Iobm", "Worked as a software engineer at ibex", "Best Employee", "Ai Resume maker")
 
-        String message ="Create a resume for a person Name:"+ details.getFirstName()+""+details.getLastName()+"experience:"+ " (dont add new lines or inverted commas or anything for formatting, and also dont format ANYTHING just write plain text (but do include headings if needed and after heading include a colon ':'))"; // Example message
+        String message = "Creat resume for person name: " + details.getFirstName()+ " "+ details.getLastName() + "Contact: "+ details.getContactNo() + "Address : " + details.getAddress()+ "Job Title: " + details.getJobTitle() + "Emails: " + details.getEmail() + "Education: " + details.getEducation()+ "Experience: " + details.getExperience() + "Awards: " + details.getAwards() + "projects: " + details.getProjects();
         String response = sendRequest(message);
         response = response.replace("\\n", " ");
         System.out.println("Response: " + response);
