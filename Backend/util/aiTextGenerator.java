@@ -15,7 +15,7 @@ public class aiTextGenerator {
         UserData details = new UserData("Hanzala", "Wahab", "0325121", "sdahda", "Software Engineer", "hanzalamwa@gmail.com",
         "Bs Cs from Iobm", "Worked as a software engineer at ibex", "Best Employee", "Ai Resume maker")
 
-        String message = "Creat resume for person name: " + details.getFirstName()+ " "+ details.getLastName() + "Contact: "+ details.getContactNo() + "Address : " + details.getAddress()+ "Job Title: " + details.getJobTitle() + "Emails: " + details.getEmail() + "Education: " + details.getEducation()+ "Experience: " + details.getExperience() + "Awards: " + details.getAwards() + "projects: " + details.getProjects();
+        String message = "Create a professional resume in plain text format. The output must include the following five sections: Summary, Education, Experience, Awards, and Projects. Each section should be written in a short, clear paragraph using the provided details. If any detail is missing, fill it in appropriately and professionally. Do not use any brackets, bullet points, formatting, or headings in bold. Keep the language natural and resume-style. Information: Name: " + details.getFirstName() + " " + details.getLastName() + ", Contact: " + details.getContactNo() + ", Address: " + details.getAddress() + ", Job Title: " + details.getJobTitle() + ", Email: " + details.getEmail() + ", Education: " + details.getEducation() + ", Experience: " + details.getExperience() + ", Awards: " + details.getAwards() + ", Projects: " + details.getProjects();
         String response = sendRequest(message);
         response = response.replace("\\n", " ");
         System.out.println("Response: " + response);
