@@ -28,21 +28,28 @@ public class aiTextGenerator {
     }
 
     // Generates a Cover Letter from UserData
-    public static CoverLetter generateCoverLetter(UserData details) {
-        String prompt = "Create a professional cover letter in plain text format. Include the following six sections clearly marked by unique tags. " +
-                "Begin each section with [START_SUMMARY], [START_EDUCATION], [START_EXPERIENCE], [START_AWARDS], [START_PROJECTS], [START_RECRUITER], and end them with their corresponding [END_] tags. " +
-                "Each section should be written in a short, clear paragraph using the provided details. Fill in missing details appropriately and professionally. Do not use other formatting. Information: " +
+    // public static CoverLetter generateCoverLetter(UserData details) {
+    //     String prompt = "Create a professional cover letter in plain text format. Include the following six sections clearly marked by unique tags. " +
+    //             "Begin each section with [START_SUMMARY], [START_EDUCATION], [START_EXPERIENCE], [START_AWARDS], [START_PROJECTS], [START_RECRUITER], and end them with their corresponding [END_] tags. " +
+    //             "Each section should be written in a short, clear paragraph using the provided details. Fill in missing details appropriately and professionally. Do not use other formatting. Information: " +
+    //             formatUserData(details);
+
+    //     String response = sendRequest(prompt);
+    //     CoverLetter letter = new CoverLetter();
+    //     letter.setSummary(extractSection(response, "SUMMARY"));
+    //     letter.setEducation(extractSection(response, "EDUCATION"));
+    //     letter.setExperience(extractSection(response, "EXPERIENCE"));
+    //     letter.setAwards(extractSection(response, "AWARDS"));
+    //     letter.setProjects(extractSection(response, "PROJECTS"));
+    //     letter.setRecruiter(extractSection(response, "RECRUITER"));
+    //     return letter;
+    // }
+    public static String generateCoverLetterText(UserData details) {
+        String prompt = "Create a professional cover letter in plain text format using the information provided. The letter should be formal, properly structured with a greeting, body, and closing, and it should flow as a single paragraph-style letter. Address the recruiter appropriately. Information: " +
                 formatUserData(details);
 
         String response = sendRequest(prompt);
-        CoverLetter letter = new CoverLetter();
-        letter.setSummary(extractSection(response, "SUMMARY"));
-        letter.setEducation(extractSection(response, "EDUCATION"));
-        letter.setExperience(extractSection(response, "EXPERIENCE"));
-        letter.setAwards(extractSection(response, "AWARDS"));
-        letter.setProjects(extractSection(response, "PROJECTS"));
-        letter.setRecruiter(extractSection(response, "RECRUITER"));
-        return letter;
+        return response;
     }
 
     // Sends request to Gemini API
