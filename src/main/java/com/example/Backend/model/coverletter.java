@@ -7,6 +7,7 @@ public class CoverLetter {
     private String awards;
     private String projects;
     private String recruiter;
+    private String fullLetter;
 
     public CoverLetter() {
         this.summary = "";
@@ -15,6 +16,7 @@ public class CoverLetter {
         this.awards = "";
         this.projects = "";
         this.recruiter = "";
+        this.fullLetter = "";
     }
 
     public CoverLetter(String summary, String education, String experience, String awards, String projects, String recruiter) {
@@ -24,6 +26,7 @@ public class CoverLetter {
         this.awards = awards;
         this.projects = projects;
         this.recruiter = recruiter;
+        this.fullLetter = "";
     }
 
     public String getSummary() {
@@ -73,4 +76,13 @@ public class CoverLetter {
     public void setRecruiter(String recruiter) {
         this.recruiter = recruiter;
     }
+
+    public String getFullLetter() {
+        return fullLetter;
+    }
+
+    public void setFullLetter(String fullLetter) {
+        this.fullLetter = fullLetter;
+    }
 }
+
