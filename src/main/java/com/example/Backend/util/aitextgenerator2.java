@@ -44,12 +44,16 @@ public class aiTextGenerator {
     //     letter.setRecruiter(extractSection(response, "RECRUITER"));
     //     return letter;
     // }
-    public static String generateCoverLetterText(UserData details) {
-        String prompt = "Create a professional cover letter in plain text format using the information provided. The letter should be formal, properly structured with a greeting, body, and closing, and it should flow as a single paragraph-style letter. Address the recruiter appropriately. Information: " +
-                formatUserData(details);
+     public static CoverLetter generateCoverLetter(UserData details) {
+        String prompt = "Create a professional cover letter in plain text format using the information provided. " +
+                "The letter should have a greeting, body, and closing, all in proper paragraph format. " +
+                "It must flow as a single, cohesive letter without any tags or special formatting. " +
+                "Address the recruiter professionally. Information: " + formatUserData(details);
 
         String response = sendRequest(prompt);
-        return response;
+        CoverLetter letter = new CoverLetter();
+        letter.setFullLetter(response);
+        return letter;
     }
 
     // Sends request to Gemini API
