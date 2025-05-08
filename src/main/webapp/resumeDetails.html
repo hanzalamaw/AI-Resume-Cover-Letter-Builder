@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Generator</title>
+    <link rel="stylesheet" href="resumeDetails.css">
+</head>
+<body>
+    <section class="nav">
+        <div class="navContent">
+            <img src="imgs/back.png" alt="back" onclick="window.location.href='index.html'" style="cursor: pointer;" class="fade-in-section">
+            <img src="imgs/logo-white.png" alt="" style="width: auto; height: 3.5rem;" class="fade-in-section">
+        </div>
+    </section>
+
+    <section class="userInput fade-in-section">
+        <div class="leftInput">
+            <div class="leftSection selected" id="personal">
+                <p>Personal Information</p>
+            </div>
+            
+            <div class="leftSection">
+                <p>Education</p>
+            </div>
+            
+            <div class="leftSection">
+                <p>Experience</p>
+            </div>
+            
+            <div class="leftSection">
+                <p>Projects</p>
+            </div>
+            
+            <div class="leftSection">
+                <p>Awards/Certificates</p>
+            </div>
+        </div>
+
+        <div class="rightInput">
+            <div class="rightTop">
+                <h1>Personal Information</h1>
+            </div>
+            <form id="userData" autocomplete="nope">
+                <div class="rightSection">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" autocomplete="off" required>
+                </div>
+                
+                <div class="rightSection">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" autocomplete="nope" required>
+                </div>
+                
+                <div class="rightSection">
+                    <label for="profession">Profession Name</label>
+                    <input type="text" id="profession" autocomplete="off" required>
+                </div>
+                
+                <div class="rightSection">
+                    <label for="contactNo">Contact No</label>
+                    <input type="text" id="contactNo" autocomplete="off" required>
+                </div>  
+                
+                <div class="rightSection">
+                    <label for="email">Email</label>
+                    <input type="text" id="email" autocomplete="off" required>
+                </div>
+                
+                <div class="rightSection">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" autocomplete="off" required>
+                </div>
+
+                <div class="rightSection">
+                    <p>‎</p>
+                </div>
+
+                <div id="submit">
+                    <button type="submit" style="cursor: pointer;">Next Session</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    
+    <p class="copyright fade-in-section" >© 2025 [Hanzala, Anoosh, Ashita]. All Rights Reserved.</p>
+
+    <script src="resumeDetails.js"></script>
+</body>
+</html>
