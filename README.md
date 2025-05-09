@@ -67,52 +67,36 @@ The project uses **Maven** for dependency management. If Maven is not already in
 mvn -version
 ```
 
-### **4. Setup Backend**
+### **4. Install Tomcat**
 
-Once the ZIP file is downloaded and dependencies are installed, navigate to the backend folder where the `pom.xml` file is located.
-
-### **5. Install Node.js and npm for Frontend**
-
-The frontend requires **Node.js** and **npm** for managing dependencies.
-
-- Download and install **Node.js** from the official [Node.js website](https://nodejs.org/).
-- After installation, verify it by running:
+- Download **TOmcat** from the official [Tomcat website]([https://maven.apache.org/download.cgi](https://tomcat.apache.org/download-90.cgi)).
+- Install Tomcat and run the following command in the terminal:
 
 ```bash
-node -v
-npm -v
+mvn clean package
+```
+
+### **5. Starting the Local Server**
+
+This will create a `ai_resume.war` file in target folder, place that file in `tomcat\webapps\ai_resume.war`.
+
+Then navigate to `tomcat\bin\` using `cd` and use this command in terminal to start the server on `localhost:8080`:
+
+```bash
+startup.bat
 ```
 
 ### **6. Run the Project**
 
-Once all dependencies are installed, you can start both the backend and frontend manually.
-
-- **Backend**: Navigate to the backend folder and run the project using Maven:
-
-```bash
-mvn spring-boot:run
-```
-
-This will start the backend server on **localhost:8080**.
-
-- **Frontend**: Navigate to the frontend directory and install the required npm dependencies:
-
-```bash
-npm install
-npm start
-```
-
-This will start the frontend on **localhost:3000**.
-
----
+Once the server is started, you can visit `http://localhost:8080/ai_resume/index.html` to view the AI Resume Builder.
 
 ## 📋 **Usage**
 
 Once both the backend and frontend are running:
 
-1. Go to `http://localhost:3000` in your browser to access the dashboard.
-2. Fill out the form with your details (experience, skills, etc.).
-3. Choose whether you'd like to generate a **Resume** or **Cover Letter**.
+1. Go to `http://localhost:8080/ai_resume/index.html` in your browser to access the dashboard.
+2. Choose whether you'd like to generate a **Resume** or **Cover Letter**.
+3. Fill out the form with your details (experience, skills, etc.).
 4. Preview the generated document.
 5. Download the document as a **PDF**.
 
