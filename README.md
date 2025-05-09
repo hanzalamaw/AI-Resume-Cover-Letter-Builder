@@ -69,7 +69,7 @@ mvn -version
 
 ### **4. Install Tomcat**
 
-- Download **TOmcat** from the official [Tomcat website]([https://maven.apache.org/download.cgi](https://tomcat.apache.org/download-90.cgi)).
+- Download **Tomcat** from the official [Tomcat website]([https://maven.apache.org/download.cgi](https://tomcat.apache.org/download-90.cgi)).
 - Install Tomcat and run the following command in the terminal:
 
 ```bash
