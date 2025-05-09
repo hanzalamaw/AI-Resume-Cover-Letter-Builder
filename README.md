@@ -22,8 +22,8 @@ This project is part of our **Object-Oriented Programming (OOP) course** for **S
 ## 🛠️ **Technologies Used**
 
 - **Backend**: Java 
-- **Frontend**: JavaScript, HTML, CSS, TailwindCSS
-- **AI Integration**: OpenAI API (or similar service for text generation)
+- **Frontend**: JavaScript, HTML, CSS
+- **AI Integration**: Google Gemini API
 - **PDF Generation**: iText library
 - **Error Handling**: Custom error management
 
