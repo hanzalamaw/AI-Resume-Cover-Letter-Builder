@@ -16,14 +16,14 @@ body {
 }
 
 .fade-in-section {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
 .fade-in-section.visible {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .container {
@@ -32,10 +32,10 @@ body {
 }
 
 .logo img{
-    width: auto;
-    height: 4rem;
-    margin-bottom: 2.5rem;
-    margin-top: 1.3rem;
+  width: auto;
+  height: 4rem;
+  margin-bottom: 2.5rem;
+  margin-top: 1.3rem;
 }
 
 .subtitle {
@@ -66,29 +66,27 @@ body {
 
 .card-container {
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(3,1fr);
   justify-content: center;
-  gap: 50px;
+  align-items: center;
   margin-bottom: 30px;
   width: 100%;
 }
 
-/* Gradient border wrapper */
 .card-border {
-  padding: 1.9px;
+  padding: 2px;
   border-radius: 18px;
   background: linear-gradient(to top, #2E1881, #A78FFF);
 }
 
-/* Inner card */
 .card {
-  width: 290px;
+  width: 400px;
   padding: 30px 30px;
   border-radius: 16px;
   background-color: #fff;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: none; /* Remove standard border */
+  border: none; 
   text-align: left;
   display: flex;
   flex-direction: column;
@@ -146,8 +144,8 @@ button:hover {
 
   
 .copyright {
-    font-size: 13px;
-    color: #999;
-    margin-top: 14px;
-    font-weight: 600 !important;
+  font-size: 13px;
+  color: #999;
+  margin-top: 14px;
+  font-weight: 600 !important;
 }

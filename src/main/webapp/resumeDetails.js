@@ -8,11 +8,11 @@ document.addEventListener("DOMContentLoaded", function () {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add("visible");
-                    observer.unobserve(entry.target); // Unobserve after first reveal
+                    observer.unobserve(entry.target); 
                 }
             });
         },
-        { threshold: 0.2 } // Adjust threshold for earlier/later triggering
+        { threshold: 0.2 } 
     );
 
     sections.forEach(section => {
@@ -85,6 +85,9 @@ function capitalize(str) {
     return str.charAt(0).toUpperCase() + str.slice(1).replace("/", " / ");
 }
 
+let firstName = "";
+let lastName = "";
+
 form.addEventListener('submit', function (e) {
     e.preventDefault();
 
@@ -98,6 +101,9 @@ form.addEventListener('submit', function (e) {
             email: document.getElementById('email').value,
             address: document.getElementById('address').value
         };
+
+        firstName = document.getElementById('firstName').value;
+        lastName  = document.getElementById('lastName').value;
     } else {
         formData[current] = document.getElementById(current).value;
     }
@@ -116,11 +122,12 @@ form.addEventListener('submit', function (e) {
             if (!response.ok) {
                 throw new Error(data.error || 'Unknown server error');
             }
-            alert('Resume generated successfully!');
+            let fullName = `${firstName}_${lastName}`;
+            fullName = fullName.replaceAll(" ", "_");
+            window.location.href = `http://localhost:8080/Resume/${fullName}_Resume.pdf`;
             })
             .catch(error => alert('Error: ' + error.message));
-
-    }
+    } 
 });
 
 renderSection();

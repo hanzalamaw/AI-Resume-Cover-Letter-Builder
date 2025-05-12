@@ -1,7 +1,6 @@
 package com.example.Backend.util;
 
 import com.itextpdf.text.*;
-import com.itextpdf.text.Paragraph;
 import com.itextpdf.text.pdf.PdfWriter;
 
     
@@ -15,19 +14,19 @@ public class pdfGenerator {
                                 String project, String name, String contact, String email, String address) {
     
             try {
-                // 1. Create directory if it doesn't exist
-                File folder = new File("Resume");
+                // Create directory if it doesn't exist
+                File folder = new File("D:/tomcat/webapps/ROOT/Resume/");
                 if (!folder.exists()) folder.mkdir();
     
-                // 2. Set file path
-                String filePath = "Resume/" + name.replaceAll(" ", "_") + "_Resume.pdf";
+                // Set file path
+                String filePath = "D:/tomcat/webapps/ROOT/Resume/" + name.replaceAll(" ", "_") + "_Resume.pdf";
     
-                // 3. Create Document
+                // Create Document
                 Document document = new Document();
                 PdfWriter.getInstance(document, new FileOutputStream(filePath));
                 document.open();
     
-                // 4. Add Content
+                // Add Content
                 Font headingFont = FontFactory.getFont(FontFactory.HELVETICA_BOLD, 16);
                 Font normalFont = FontFactory.getFont(FontFactory.HELVETICA, 12);
     
@@ -54,7 +53,6 @@ public class pdfGenerator {
                 document.add(new Paragraph("Projects", headingFont));
                 document.add(new Paragraph(project, normalFont));
     
-                // 5. Close document
                 document.close();
     
                 System.out.println("✅ Resume PDF generated: " + filePath);

@@ -1,10 +1,7 @@
 com\example\Backend\model\Resume.class
-com\example\Backend\util\a.class
 com\example\Backend\exception\ResourceNotFoundException.class
-com\example\App.class
 com\example\Backend\util\pdfGenerator.class
 com\example\Backend\controller\AiTextGeneratorServlet.class
-com\example\Backend\controller\coverLetterController.class
 com\example\Backend\model\UserData.class
 com\example\Backend\util\aiTextGenerator.class
 com\example\Backend\model\CoverLetter.class

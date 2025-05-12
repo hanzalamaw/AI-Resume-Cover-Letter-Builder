@@ -8,8 +8,6 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 import com.example.Backend.model.*;
-import com.example.Backend.controller.*;
-import com.example.Backend.util.*;
 
 public class aiTextGenerator {
     public static void main(String[] args) {
@@ -60,13 +58,11 @@ public class aiTextGenerator {
 
         while (retryCount < maxRetries) {
             try {
-                // Set up the connection
                 URL obj = new URL(url);
                 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
                 con.setRequestMethod("POST");
                 con.setRequestProperty("Content-Type", "application/json");
 
-                // Prepare the body with the input message
                 String body = "{\n" +
                         "  \"contents\": [{\n" +
                         "    \"parts\": [{\"text\": \"" + message + "\"}]\n" +
@@ -91,10 +87,9 @@ public class aiTextGenerator {
                     }
                     in.close();
                     if (responseCode == 503) {
-                        // If 503, try again
                         retryCount++;
                         System.out.println("Retrying... Attempt " + retryCount);
-                        Thread.sleep(5000); // Wait for 5 seconds before retry
+                        Thread.sleep(5000); 
                         continue;
                     }
                     return "Error: " + responseCode + " - " + errorResponse.toString();
@@ -122,8 +117,6 @@ public class aiTextGenerator {
     }
 
     public static String extractContentFromResponse(String response) {
-        // Print the full response for debugging purposes
-        System.out.println("Full Response: " + response);
 
         try {
             // Locate the "candidates" field
@@ -139,7 +132,7 @@ public class aiTextGenerator {
             }
 
             // Locate the "text" field within the content
-            int startMarker = response.indexOf("\"text\": \"", contentIndex) + 9; // Skip over "\"text\": \""
+            int startMarker = response.indexOf("\"text\": \"", contentIndex) + 9; 
             if (startMarker == -1) {
                 return "Error: Text field not found.";
             }

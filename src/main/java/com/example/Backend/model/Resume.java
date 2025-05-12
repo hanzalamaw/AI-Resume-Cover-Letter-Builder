@@ -6,6 +6,7 @@ public class Resume {
     private String experience;
     private String awards;
     private String projects;
+
     public Resume(){
         this.summary = "";
         this.Education = "";
@@ -13,6 +14,7 @@ public class Resume {
         this.awards = "";
         this.projects = "";
     }
+
     public Resume(String summary, String Education, String experience, String awards, String projects) {
         this.summary = summary;
         this.Education = Education;
@@ -20,9 +22,11 @@ public class Resume {
         this.awards = awards;
         this.projects = projects;
     }
+
     public String getSummary() {
         return summary;
     }
+    
     public void setSummary(String summary) {
         this.summary = summary;
     }
